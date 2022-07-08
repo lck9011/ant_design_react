@@ -1,25 +1,38 @@
-import logo from './logo.svg';
+import {
+  HomeOutlined,
+  AppstoreOutlined,
+  ContainerOutlined,
+  DesktopOutlined,
+  MailOutlined,
+  MenuFoldOutlined,
+  MenuUnfoldOutlined,
+  PieChartOutlined,
+  SettingOutlined,LaptopOutlined, NotificationOutlined, UserOutlined
+} from '@ant-design/icons';
 import './App.css';
+import { Button, Menu,Breadcrumb, Layout } from 'antd';
 
-function App() {
+import 'antd/dist/antd.min.css';
+import React, { useState } from 'react';
+import { Badge, Calendar } from 'antd';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import NavigationBar from './components/NavigationBar';
+
+const App = () => {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="wrapper">
+      {/* <h1>Login</h1> */}     
+      <Router>
+        {/* Find the pages routes in the MiniDrawer component */}
+        <NavigationBar/>
+        {/* <Navbar/> */}
+        
+      </Router>
+
+    </div> 
   );
-}
+};
 
 export default App;
